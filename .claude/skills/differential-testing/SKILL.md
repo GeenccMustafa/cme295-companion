@@ -1,11 +1,11 @@
 ---
-name: differential-test
-description: Builds a test that runs two implementations that must agree (the from-scratch NumPy version and a PyTorch port, a naive and an optimized algorithm, or this repository's code and a library reference such as torch.nn.functional) on the same inputs and fails on any difference beyond a stated tolerance. Use when porting a lecture's NumPy code to PyTorch, when optimizing an existing implementation, or when checking a from-scratch implementation against a trusted library.
+name: differential-testing
+description: Compares two implementations that must compute the same result by running both on the same inputs and failing on any difference beyond a stated tolerance, with the trusted implementation as the oracle. Use when porting code to another framework, optimizing or refactoring an implementation, or checking a from-scratch implementation against a library reference.
 metadata:
   adapted-from: https://github.com/GeenccMustafa/claude-skills/tree/main/plugins/verification/skills/differential-test
 ---
 
-# Differential Tests
+# Differential Testing
 
 ## Overview
 
@@ -27,7 +27,7 @@ Typical pairs in this repository:
 
 ## 2. Choose Inputs
 
-1. Inputs generated with the strategies from the `property-tests` skill (varied shapes, lengths, masks)
+1. Generated inputs, reusing the strategies written for `property-based-testing` (varied shapes, lengths, masks)
 2. The lecture's own worked example (for instance the end-to-end translation example in Lecture 01)
 3. Edge cases: sequence length 1, fully padded rows, very large logits
 

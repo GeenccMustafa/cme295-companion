@@ -1,11 +1,11 @@
 ---
-name: new-lecture
-description: Plans and builds a new lecture folder in this repository (lectures/NN-name with a guide, an lNN package, tests, a demo and exercises) from the SYLLABUS entry, one module at a time, keeping the test suite green after every step. Use when starting work on the next CME295 lecture, when the user asks to add or scaffold a lecture, or when picking up an unfinished lecture.
+name: lecture-development
+description: Plans and builds a complete lecture unit (guide, implementation, tests, demo and exercises) from its syllabus entry, one module at a time, keeping the test suite green after every step. Use when starting a new lecture, scaffolding a lecture folder, or resuming an unfinished one.
 metadata:
   adapted-from: https://github.com/addyosmani/agent-skills/tree/main/skills/planning-and-task-breakdown and https://github.com/addyosmani/agent-skills/tree/main/skills/incremental-implementation
 ---
 
-# New Lecture
+# Lecture Development
 
 ## Overview
 
@@ -38,7 +38,7 @@ Show the plan to the user before writing code when the lecture's scope is ambigu
 
 ```
 lectures/NN-name/
-├── README.md          # lecture guide (structure in the numpy-docstrings skill)
+├── README.md          # lecture guide (structure in the documentation skill)
 ├── EXERCISES.md       # Concepts + Coding
 ├── demo.py            # documented functions + main() guard
 ├── lNN/
@@ -56,9 +56,9 @@ lectures/NN-name/
 
 For each module, in plan order:
 
-1. Write the failing tests (`test-driven-development`; add `property-tests` where a property exists; add a `differential-test` against a library reference when one is available).
+1. Write the failing tests (`test-driven-development`). Add property tests where a property exists (`property-based-testing`) and a comparison with a library reference when one is available (`differential-testing`).
 2. Implement until they pass.
-3. Write the NumPy-style docstrings with shapes, Notes, References and Examples (`numpy-docstrings`).
+3. Write the docstrings with shapes, Notes, References and Examples (`documentation`).
 4. Run `uv run ruff format . && uv run ruff check . && uv run pytest`.
 5. Commit the module on its own (`git-workflow-and-versioning`).
 
@@ -67,7 +67,7 @@ Do not start the next module with the suite red. Do not add features the SYLLABU
 ## 5. Write the Guide and Demo
 
 - `demo.py`: one documented function per stage of the lecture, printing intermediate results, called from `main()`.
-- `README.md`: follow the structure in `numpy-docstrings`; link every topic row to its module.
+- `README.md`: follow the lecture guide structure in the `documentation` skill; link every topic row to its module.
 - `EXERCISES.md`: concept questions whose answers can be checked with the code, and coding tasks that extend specific files.
 
 ## 6. Update the Repository Indexes
@@ -79,7 +79,7 @@ In the same change:
 
 ## 7. Finish
 
-Run the `pre-pr-check` skill, then `code-review-and-quality` on the lecture's diff. When everything passes and the user agrees, tag `lecture-NN`.
+Run the `pre-merge-verification` skill, then `code-review-and-quality` on the lecture's diff. When everything passes and the user agrees, tag `lecture-NN`.
 
 ## Verification
 

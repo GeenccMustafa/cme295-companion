@@ -1,11 +1,11 @@
 ---
-name: numpy-docstrings
-description: Defines how code and lecture documentation are written in this repository, using NumPy-style docstrings with shapes, math, references and runnable doctest examples, and lecture READMEs with a fixed structure, and how to detect documentation that has drifted from the code. Use when writing or editing any module, class or function in a lecture package, when writing a lecture README or EXERCISES file, or when code changes might have made existing documentation wrong.
+name: documentation
+description: Writes and maintains code and learning documentation: docstrings that state shapes, math, sources and runnable examples, guide pages with a consistent structure, and checks for documentation that has drifted from the code. Use when writing or editing a module, class or function, when writing a guide, README or exercise sheet, or when a code change may have made existing documentation wrong.
 metadata:
   adapted-from: https://github.com/addyosmani/agent-skills/tree/main/skills/documentation-and-adrs
 ---
 
-# Documentation: NumPy Docstrings and Lecture Guides
+# Documentation
 
 ## Overview
 

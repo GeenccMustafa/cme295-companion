@@ -1,11 +1,11 @@
 ---
-name: pre-pr-check
-description: Runs this repository's local checks in order of cost (ruff format, ruff lint, pytest with doctests, every lecture demo), fixes failures for at most three rounds, then escalates, and records what was verified in the commit message. Use when the user asks to check a change before committing, pushing or opening a pull request ("is this ready", "make sure it's green"), not on every small edit.
+name: pre-merge-verification
+description: Runs a project's local checks from cheapest to most expensive (formatting, linting, tests, runnable examples), fixes failures for at most three rounds before escalating, and records in the commit what was verified. Use when asked to check a change before committing, pushing or opening a pull request ("is this ready", "make sure it's green"), not on every small edit.
 metadata:
   adapted-from: https://github.com/GeenccMustafa/claude-skills/tree/main/plugins/verification/skills/pre-pr-check
 ---
 
-# Pre-PR Check
+# Pre-Merge Verification
 
 ## Overview
 

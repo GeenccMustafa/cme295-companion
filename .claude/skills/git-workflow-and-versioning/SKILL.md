@@ -1,11 +1,11 @@
 ---
 name: git-workflow-and-versioning
-description: Defines how changes to this repository are committed, branched and released (small atomic commits, English imperative messages with a body explaining why, one lecture module per commit where possible, tags per completed lecture). Use when committing, writing a commit message, splitting work into commits, opening a pull request, or tagging a release.
+description: Structures commits, branches, pull requests and releases: small atomic commits, messages that explain why, short-lived branches and tagged releases. Use when committing, writing a commit message, splitting work into commits, opening a pull request, or tagging a release.
 metadata:
   adapted-from: https://github.com/addyosmani/agent-skills/tree/main/skills/git-workflow-and-versioning
 ---
 
-# Git Workflow
+# Git Workflow and Versioning
 
 ## Overview
 
@@ -33,7 +33,7 @@ History in this repository should read like the course: one idea at a time, each
   ```
 
 - Prefix the subject with the lecture when it helps scanning: `L02: Add RoPE`.
-- End with the `Verified-by:` trailer from the `pre-pr-check` skill.
+- End with the `Verified-by:` trailer from the `pre-merge-verification` skill.
 - Commits are authored by the repository owner. Do not add AI co-author trailers or "generated with" lines.
 - Never commit secrets, `.env` files, `.claude/settings.local.json`, virtual environments, course PDFs or video transcripts (course materials are linked, not copied).
 

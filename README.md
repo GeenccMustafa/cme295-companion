@@ -68,7 +68,7 @@ Each lecture's package has a unique name (`l01`, `l02`, ...) so that all lecture
 
 ## Working with AI coding agents
 
-[AGENTS.md](AGENTS.md) describes the conventions, and [.claude/skills/](.claude/skills/) holds the workflows agents follow here, such as building a new lecture, test-driven development for numerical code, property tests and pre-PR checks. Some skills are adapted from [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) and [GeenccMustafa/claude-skills](https://github.com/GeenccMustafa/claude-skills); see [.claude/skills/README.md](.claude/skills/README.md).
+[AGENTS.md](AGENTS.md) describes the conventions, and [.claude/skills/](.claude/skills/) holds the workflows agents follow here, such as lecture development, test-driven and property-based testing, documentation and pre-merge verification. Some skills are adapted from [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) and [GeenccMustafa/claude-skills](https://github.com/GeenccMustafa/claude-skills); see [.claude/skills/README.md](.claude/skills/README.md).
 
 ## Official course resources
 

@@ -1,11 +1,11 @@
 ---
 name: source-driven-development
-description: Grounds every formula, constant, hyperparameter and library call in this repository in a primary source (the original paper, the CME295 lecture slides or video, or official library documentation) and cites it. Use when implementing an algorithm from a lecture, writing a Notes or References section, quoting model sizes or benchmark numbers, or calling a NumPy or PyTorch API whose behaviour might have changed between versions.
+description: Grounds formulas, constants, hyperparameters and library usage in primary sources (original papers, course material, official documentation), cites them, and flags anything unverified. Use when implementing a published algorithm, writing the math or references of documentation, quoting model sizes or benchmark numbers, or relying on library behaviour that may differ between versions.
 metadata:
   adapted-from: https://github.com/addyosmani/agent-skills/tree/main/skills/source-driven-development
 ---
 
-# Source-Driven Development for ML Code
+# Source-Driven Development
 
 ## Overview
 

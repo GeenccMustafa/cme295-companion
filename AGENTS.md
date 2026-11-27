@@ -40,12 +40,12 @@ uv run python lectures/01-transformers/demo.py
 
 | Skill | Use it to |
 |---|---|
-| [new-lecture](.claude/skills/new-lecture/SKILL.md) | Plan and build the next lecture folder |
-| [test-driven-development](.claude/skills/test-driven-development/SKILL.md) | Write tests that pin the mathematics before the code |
-| [property-tests](.claude/skills/property-tests/SKILL.md) | Test invariants and round-trips with Hypothesis |
-| [differential-test](.claude/skills/differential-test/SKILL.md) | Compare NumPy code with a PyTorch port or a library reference |
-| [source-driven-development](.claude/skills/source-driven-development/SKILL.md) | Ground formulas and numbers in papers and official docs, and cite them |
-| [numpy-docstrings](.claude/skills/numpy-docstrings/SKILL.md) | Write docstrings and lecture guides, and catch documentation drift |
-| [code-review-and-quality](.claude/skills/code-review-and-quality/SKILL.md) | Review a change against the five axes and REVIEW.md |
-| [pre-pr-check](.claude/skills/pre-pr-check/SKILL.md) | Run every local check before committing or opening a PR |
-| [git-workflow-and-versioning](.claude/skills/git-workflow-and-versioning/SKILL.md) | Commit, branch, open PRs and tag lectures |
+| [lecture-development](.claude/skills/lecture-development/SKILL.md) | Plan and build a lecture: guide, code, tests, demo and exercises |
+| [test-driven-development](.claude/skills/test-driven-development/SKILL.md) | Write a failing test first, then the code that passes it |
+| [property-based-testing](.claude/skills/property-based-testing/SKILL.md) | Test properties that must hold for every input |
+| [differential-testing](.claude/skills/differential-testing/SKILL.md) | Check that two implementations of the same computation agree |
+| [source-driven-development](.claude/skills/source-driven-development/SKILL.md) | Ground formulas, numbers and API usage in primary sources, and cite them |
+| [documentation](.claude/skills/documentation/SKILL.md) | Write docstrings and guides, and catch documentation drift |
+| [code-review-and-quality](.claude/skills/code-review-and-quality/SKILL.md) | Review a change across five axes, using REVIEW.md |
+| [pre-merge-verification](.claude/skills/pre-merge-verification/SKILL.md) | Run the local checks before a commit, push or pull request |
+| [git-workflow-and-versioning](.claude/skills/git-workflow-and-versioning/SKILL.md) | Commit, branch, open pull requests and tag releases |

@@ -1,11 +1,11 @@
 ---
 name: test-driven-development
-description: Drives implementation of numerical and ML code in this repository with the red-green-refactor loop, using shape checks, mathematical invariants, known values and gradient checks as tests. Use when implementing any new module in a lecture package (l01, l02, ...), fixing a bug in one, or changing the behaviour of existing code, even when the change looks obvious from reading it.
+description: Drives implementation with the red-green-refactor loop: a failing test before the code and, for bugs, a reproduction test before the fix, with shapes, invariants, known values and gradients as tests for numerical code. Use when implementing new logic, fixing a bug, or changing existing behaviour, even when the change looks obvious from reading it.
 metadata:
   adapted-from: https://github.com/addyosmani/agent-skills/tree/main/skills/test-driven-development
 ---
 
-# Test-Driven Development for Numerical Code
+# Test-Driven Development
 
 ## Overview
 
@@ -41,7 +41,7 @@ uv run ruff check . && uv run ruff format --check .
 
 1. **RED.** Write the test in `lectures/NN-*/tests/test_<module>.py`. Run it and confirm it fails *because the behaviour is missing*, not because of an import error or typo.
 2. **GREEN.** Write the simplest implementation that passes. Prefer explicit loops over clever broadcasting at first if it is clearer.
-3. **REFACTOR.** Vectorize, rename, add the NumPy-style docstring (see the `numpy-docstrings` skill). Run the tests after every step.
+3. **REFACTOR.** Vectorize, rename, add the docstring (see the `documentation` skill). Run the tests after every step.
 
 ## What to Test in Numerical Code
 

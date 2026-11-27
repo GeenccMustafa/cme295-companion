@@ -1,11 +1,11 @@
 ---
 name: code-review-and-quality
-description: Reviews changes to this repository along five axes adapted to teaching ML code (mathematical correctness, numerical robustness, clarity for learners, tests, and documentation), and classifies every finding by severity with file and line evidence. Use before merging any change, when asked to review a diff or pull request, or when checking work written by yourself, another agent or a contributor.
+description: Reviews a code change across five axes (correctness, numerical robustness, readability, tests and documentation) and reports every finding with a severity and file-and-line evidence. Use before merging any change, when asked to review a diff or pull request, or when checking work written by yourself, another agent or a contributor.
 metadata:
   adapted-from: https://github.com/addyosmani/agent-skills/tree/main/skills/code-review-and-quality
 ---
 
-# Code Review for a Teaching Codebase
+# Code Review and Quality
 
 ## Overview
 
@@ -41,13 +41,13 @@ A change is ready when it is correct, robust, easy for a learner to read, tested
 
 ### 4. Tests
 
-- Review the tests first: do they pin the mathematics (invariants, known values, structural properties) or only the shapes? See `test-driven-development` and `property-tests`.
+- Review the tests first: do they pin the mathematics (invariants, known values, structural properties) or only the shapes? See `test-driven-development` and `property-based-testing`.
 - Would the tests fail if the bug you are worried about existed? If unsure, try it.
 - Are tests deterministic and fast?
 
 ### 5. Documentation
 
-- NumPy-style docstrings with shapes, Notes, References and Examples (see `numpy-docstrings`).
+- Docstrings with shapes, Notes, References and Examples (see `documentation`).
 - Lecture README, `SYLLABUS.md` and the top-level README agree with the code.
 - Claims and numbers are sourced (see `source-driven-development`).
 
@@ -56,7 +56,7 @@ A change is ready when it is correct, robust, easy for a learner to read, tested
 1. **Understand the intent.** Read the PR description or the request, and the lecture section the change implements.
 2. **Read the tests.**
 3. **Read the implementation** against the five axes.
-4. **Run the checks** from `pre-pr-check`. A review that did not run the tests says so.
+4. **Run the checks** listed in `pre-merge-verification`. A review that did not run the tests says so.
 5. **Classify findings**:
    - **Important**: wrong results, NaN or crash on valid input, a test that cannot fail, documentation that states something false.
    - **Nit**: naming, wording, small clarity improvements. At most three per review.

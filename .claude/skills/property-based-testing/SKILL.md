@@ -1,11 +1,11 @@
 ---
-name: property-tests
-description: Finds properties that must hold for every input of a numerical or tokenization function in this repository (round-trips, invariants, equivariance, causality, equivalence with a reference) and tests them with Hypothesis over generated inputs. Use when hardening a tokenizer, a normalization, a masking routine or any function whose example-based tests only cover the cases the author thought of, or when the user asks for property or fuzz tests.
+name: property-based-testing
+description: Identifies properties that must hold for every input (round-trips, invariants, symmetries, causality, equivalence with a reference) and tests them against many generated inputs. Use when hardening parsers, tokenizers, normalizations, masking or other logic whose example-based tests only cover the cases the author thought of, or when asked for property or fuzz tests.
 metadata:
   adapted-from: https://github.com/GeenccMustafa/claude-skills/tree/main/plugins/verification/skills/property-tests
 ---
 
-# Property Tests with Hypothesis
+# Property-Based Testing
 
 ## Overview
 
