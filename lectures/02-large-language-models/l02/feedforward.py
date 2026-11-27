@@ -69,8 +69,13 @@ def silu(x: np.ndarray) -> np.ndarray:
     numpy.ndarray
         Same shape as `x`. Close to ``x`` for large positive inputs and to 0
         for large negative inputs, with a small negative dip in between.
+
+    Notes
+    -----
+    The sigmoid is computed as ``(1 + tanh(x / 2)) / 2``, which equals
+    ``1 / (1 + exp(-x))`` but cannot overflow for very negative `x`.
     """
-    return x / (1.0 + np.exp(-x))
+    return x * 0.5 * (1.0 + np.tanh(0.5 * x))
 
 
 class SwiGLUFeedForward:

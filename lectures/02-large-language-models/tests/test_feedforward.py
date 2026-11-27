@@ -34,3 +34,9 @@ def test_swiglu_gate_closes_when_gate_preactivation_is_very_negative():
     ffn.W_gate = -100.0 * np.eye(2)
     out = ffn(np.array([[1.0, 1.0]]))
     np.testing.assert_allclose(out, 0.0, atol=1e-30)
+
+
+def test_silu_does_not_overflow_for_very_negative_inputs():
+    with np.errstate(all="raise"):
+        out = silu(np.array([-1000.0, 1000.0]))
+    np.testing.assert_allclose(out, [0.0, 1000.0])
