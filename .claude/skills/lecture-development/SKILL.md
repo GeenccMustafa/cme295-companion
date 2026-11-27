@@ -43,14 +43,13 @@ lectures/NN-name/
 ├── demo.py            # documented functions + main() guard
 ├── lNN/
 │   └── __init__.py    # package docstring listing the modules
-└── tests/
-    └── conftest.py    # puts the lecture folder on sys.path
+└── tests/             # test_<module>.py and test_<module>_properties.py
 ```
 
 - The folder name is the two-digit number and a short slug (`02-large-language-models`).
 - The package is `lNN` so that every lecture can be imported in one pytest run.
-- Copy `tests/conftest.py` from Lecture 01 unchanged.
-- Within a lecture, import sibling modules relatively (`from .attention import ...`). Importing from another lecture's package is allowed when building on it (`from l01.attention import softmax`), but then add that lecture's folder to `sys.path` in `conftest.py` and `demo.py`, and say so in the README.
+- The root `conftest.py` puts every lecture folder on `sys.path`, so tests and doctests need no per-lecture setup.
+- Within a lecture, import sibling modules relatively (`from .attention import ...`). Importing from an earlier lecture's package is encouraged when building on it (`from l01.attention import softmax`), because it shows how the ideas stack up. `demo.py` must then add that lecture's folder to `sys.path` too, and the README says which earlier modules are reused.
 
 ## 4. Build One Module at a Time
 
