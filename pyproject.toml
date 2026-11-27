@@ -1,0 +1,33 @@
+[project]
+name = "cme295-companion"
+version = "0.1.0"
+description = "Lecture-by-lecture code companion for Stanford CME295: Transformers & Large Language Models"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26"]
+
+[project.optional-dependencies]
+torch = ["torch>=2.4"]
+
+[dependency-groups]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["lectures"]
+addopts = "--import-mode=importlib"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "RUF"]
+# Math symbols (σ, √, ×, ...) in docstrings and comments are intentional.
+ignore = ["RUF001", "RUF002", "RUF003"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["l[0-9][0-9]"]
