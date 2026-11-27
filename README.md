@@ -6,7 +6,7 @@ Each lecture gets its own folder with:
 
 - a **lecture guide** (`README.md`): learning objectives, topics with video timestamps, key formulas, reading list
 - **from-scratch code** (NumPy first, PyTorch where it helps) that implements the ideas in the lecture
-- **tests** that pin the behaviour of that code
+- **tests** that pin the behaviour of that code: unit tests, Hypothesis property tests and doctests
 - **exercises** to check your understanding
 
 The code is written for reading. Each file is small, every tensor shape is annotated, and nothing is hidden behind a framework call until it has been built by hand once.
@@ -51,6 +51,9 @@ uv run python lectures/01-transformers/demo.py
 ```
 cme295-companion/
 ├── SYLLABUS.md                  # course-wide plan
+├── AGENTS.md                    # guidance for AI coding agents (CLAUDE.md imports it)
+├── REVIEW.md                    # what a bad change looks like here
+├── .claude/skills/              # agent workflows: new lecture, TDD, property tests, review, ...
 ├── lectures/
 │   └── 01-transformers/
 │       ├── README.md            # lecture guide
@@ -62,6 +65,10 @@ cme295-companion/
 ```
 
 Each lecture's package has a unique name (`l01`, `l02`, ...) so that all lectures can be tested in one run.
+
+## Working with AI coding agents
+
+[AGENTS.md](AGENTS.md) describes the conventions, and [.claude/skills/](.claude/skills/) holds the workflows agents follow here, such as building a new lecture, test-driven development for numerical code, property tests and pre-PR checks. Some skills are adapted from [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) and [GeenccMustafa/claude-skills](https://github.com/GeenccMustafa/claude-skills); see [.claude/skills/README.md](.claude/skills/README.md).
 
 ## Official course resources
 

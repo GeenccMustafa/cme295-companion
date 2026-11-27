@@ -15,3 +15,7 @@ jobs:
       - run: uv run ruff check .
       - run: uv run ruff format --check .
       - run: uv run pytest
+        env:
+          HYPOTHESIS_PROFILE: ci
+      - name: Run lecture demos
+        run: for d in lectures/*/demo.py; do uv run python "$d" > /dev/null || exit 1; done
