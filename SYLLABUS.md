@@ -33,9 +33,9 @@ Legend: 🟢 in progress · ✅ done · ⚪ planned
 
 ---
 
-## Lecture 02: Large Language Models ⚪
+## Lecture 02: Large Language Models ✅
 
-**Date:** 2026-10-02
+**Date:** 2026-10-02 · **Folder:** [lectures/02-large-language-models](lectures/02-large-language-models/)
 
 **Topics:** Transformer model families · LLM definition and architecture · Mixture of Experts (MoE) · MHA, MQA, GQA · position embeddings (RoPE and variants) · context length, temperature · sampling strategies
 
@@ -47,7 +47,14 @@ Legend: 🟢 in progress · ✅ done · ⚪ planned
 - Explain sliding window attention, GQA, pre-norm vs post-norm, LayerNorm vs RMSNorm
 - Implement greedy, temperature, top-k and top-p sampling
 
-**Code (planned):** decoder-only LM block · RMSNorm · RoPE · GQA · top-k MoE layer · samplers
+**Code:**
+- [x] RMSNorm
+- [x] SwiGLU feed-forward network
+- [x] Rotary position embeddings
+- [x] Grouped-query attention (MHA, GQA, MQA) with sliding-window masks and KV-cache sizing
+- [x] Top-k mixture of experts with the load-balancing loss
+- [x] Greedy search, beam search, temperature, top-k and top-p sampling
+- [x] Pre-norm decoder-only LM, dense or MoE, with generation
 
 ---
 

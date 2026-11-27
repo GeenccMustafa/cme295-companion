@@ -18,7 +18,7 @@ The code is written for reading. Each file is small, every tensor shape is annot
 | # | Lecture | Date | Status |
 |---|---|---|---|
 | 01 | [Transformers](lectures/01-transformers/) | 2026-09-25 | 🟢 in progress |
-| 02 | Large Language Models | 2026-10-02 | ⚪ planned |
+| 02 | [Large Language Models](lectures/02-large-language-models/) | 2026-10-02 | ✅ done |
 | 03 | LLM Training | 2026-10-09 | ⚪ planned |
 | 04 | Reinforcement Learning with LLMs | 2026-10-16 | ⚪ planned |
 | 05 | LLM Systems | 2026-10-30 | ⚪ planned |
@@ -53,13 +53,15 @@ cme295-companion/
 ├── SYLLABUS.md                  # course-wide plan
 ├── AGENTS.md                    # guidance for AI coding agents (CLAUDE.md imports it)
 ├── REVIEW.md                    # what a bad change looks like here
-├── .claude/skills/              # agent workflows: new lecture, TDD, property tests, review, ...
+├── .claude/skills/              # agent workflows: lecture development, testing, review, ...
 ├── lectures/
-│   └── 01-transformers/
+│   ├── 01-transformers/
+│   │   └── ...
+│   └── 02-large-language-models/
 │       ├── README.md            # lecture guide
 │       ├── EXERCISES.md         # practice problems
 │       ├── demo.py              # runnable walk-through
-│       ├── l01/                 # importable package with the implementations
+│       ├── l02/                 # importable package with the implementations
 │       └── tests/               # pytest suite for this lecture
 └── pyproject.toml
 ```
