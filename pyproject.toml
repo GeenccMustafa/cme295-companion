@@ -11,7 +11,7 @@ dependencies = ["numpy>=1.26"]
 torch = ["torch>=2.4"]
 
 [dependency-groups]
-dev = ["pytest>=8", "ruff>=0.6"]
+dev = ["hypothesis>=6.100", "pytest>=8", "ruff>=0.6"]
 
 [tool.uv]
 package = false

@@ -8,3 +8,5 @@ __pycache__/
 .DS_Store
 # course materials are linked, never committed
 *.pdf
+.hypothesis/
+.claude/settings.local.json
